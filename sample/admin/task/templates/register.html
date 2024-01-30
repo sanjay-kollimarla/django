@@ -1,0 +1,11 @@
+<form action="register_validate" method="POST">
+    {% csrf_token %}
+    <label for='username'>Username</label>
+    <input type="input" name="username"/>
+    <label for='password'>password</label>
+    <input type="input" name="password"/>
+    {% if x == True %}
+    <p>Username unavailable!!</p>
+    {%endif%}
+    <button type="submit">register</button>
+</form>
